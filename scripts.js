@@ -13,6 +13,12 @@ function init() {
       renderer.setSize(window.innerWidth, window.innerHeight) // size safhe
       renderer.shadowMap.enabled = true // sayeh 
 
+      camera.position.x = -60
+      camera.position.y = 60
+      camera.position.z = 0
+      camera.lookAt(scene.position)
+
+      
       
 
       document.getElementById("WebGL-output").appendChild(renderer.domElement)
