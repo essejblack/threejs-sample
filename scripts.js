@@ -26,8 +26,14 @@ function init() {
       plane.position.x = 15
       plane.position.y = 0
       plane.position.z = 0
-      plane.receiveShadow = true 
+      plane.receiveShadow = true
       scene.add(plane)
+
+      // lamp spot
+      const spotLight = new THREE.SpotLight(0xffffff)
+      spotLight.position.set(90, 100, 10)
+      spotLight.castShadow = true
+      scene.add(spotLight)
 
       document.getElementById("WebGL-output").appendChild(renderer.domElement)
 
