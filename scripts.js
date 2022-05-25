@@ -35,6 +35,20 @@ function init() {
       spotLight.castShadow = true
       scene.add(spotLight)
 
+      // mokaab
+      const cubeGeometry = new THREE.BoxGeometry(4, 4, 4)
+      const cubeMaterial = new THREE.MeshLambertMaterial({
+            color: 0xff00ff,
+            wireframe: false,
+      })
+
+      const cube = new THREE.Mesh(cubeGeometry, cubeMaterial)
+      cube.position.x = -4
+      cube.position.y = 3
+      cube.position.z = 0
+      cube.castShadow = true
+      scene.add(cube)
+
       document.getElementById("WebGL-output").appendChild(renderer.domElement)
 
       render = function () {
